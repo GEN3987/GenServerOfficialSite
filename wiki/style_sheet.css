@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "MainFont";
+    src: url("font.ttf");
+}
+
+body {
+    background-image: url(img/background.png);
+    background-size: auto 100%;
+    font-family: "MainFont";
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*ヘッダ*/
+header {
+    background-image: url(img/header.png);
+    background-size: 100% auto;
+    background-position: center center;
+    height: 200px;
+    border: 1px solid black;
+}
+header a {
+    display: inline-block;
+    margin: 20px;
+    box-shadow: -5px -10px 10px black;
+    padding: 0px;
+}
+header a h2:hover:not(header ul a) {
+    width: 130px;
+    height: 130px;
+    filter: sepia();
+}
+header a h2 {
+    transition: 1s;
+    width: 110px;
+    height: 110px;
+    color: white;
+}
+header a img {
+    transition: 1s;
+    width: 110px;
+    height: 110px;
+}
+header ul a img {
+    height: 55px;
+    width: auto;
+}
+header ul {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+header ul a {
+    box-shadow: initial;
+    float: right;
+}
+header ul a h2:hover {
+    border: white solid 3px;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #00000038;
+    height: 90px;
+    width: 110px;
+    filter: invert(100%);
+    transform: translateY(-30px);
+}
+header li {
+    float: right;
+    margin: 33px 20px;
+    list-style: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+/*メイン*/
+.main {
+    background-image:url(img/items.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: 2300px;
+    font-size: 60px;
+}
+
+.main h1 {
+    background: rgb(70, 70, 70);
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.saishu_koshin {
+    color: rgb(208, 234, 255);
+}
+
+body h1 a {
+    color: rgb(22, 0, 82);
+    text-shadow: 5px 5px 10px rgb(161, 225, 255);
+    font-size: 50px;
+}
+
+h1 {
+    font-weight: 100;
+    background: rgb(70, 70, 70);
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 130px;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;  /* 水平方向の中央寄せ */
+    align-items: center;      /* 垂直方向の中央寄せ */
+}
+.main a {
+    display: inline-flex;
+    margin: 5px 8px;
+    box-shadow: 0px 0px 10px black;
+    transition: 0.5s;
+}
+.main a:hover {
+    box-shadow: 0 33px 72px black;
+    filter: brightness(120%);
+    border: black solid 5px;
+}
+.main a:active {
+    filter: brightness(200%);
+    border: black solid 5px;
+    transform: rotateY(1080deg);
+}
+.main img {
+    width: 500px;
+    box-shadow: black;
+}
+
+/*フッター*/
+.footer {
+    background-color: rgb(71, 71, 71);
+    height: 200px;
+    padding: 40px;
+}
+
+.footer li {
+    float: left;
+    margin: 33px 20px;
+    list-style: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.footer img {
+    height: 55px;
+}
+
+.site-license {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 30px 20px;
+    float: right;
+}
+.site-license a {
+    color: #d4f9ff;
+}
+
+
+
+
+
+
+
+
+
+/*******ここからはその他*********/
+
+/*GoToTopButton*/
+.top_move {
+    font-size: 26px;
+    cursor: pointer;
+    display: inline;
+    padding: 0.65em 0.5em;
+    text-decoration: none;
+    background: #57db99;
+    color: rgb(0, 0, 0);
+    border-bottom: solid 5px #053a1f;
+    border-radius: 10px;
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    transition:0s 0.1s ease-out;
+}
+
+.top_move:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
