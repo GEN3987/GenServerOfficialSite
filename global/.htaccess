@@ -1,4 +1,4 @@
-AuthUserFile "./.htpasswd"
+AuthUserFile "/global/.htpasswd"
 AuthName "Please enter your ID and Password." 
 AuthType BASIC 
 require valid-user 
