@@ -22,34 +22,68 @@
     .tk-source-han-sans-japanese{font-family:"source-han-sans-japanese",sans-serif;}
   </style>
   <style>
-.scroll::before {
-  content: '';
+.box {
+  width: 300px;
+  height: 300px;
+  margin: calc(50vh - 150px) auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px #999;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* アニメーション設定 */
+.arrowWrap {
   position: absolute;
+  right: 0;
   bottom: 0;
-  left: 50%;
+  height: 200px
+}
+
+.arrowInner p {
+  font-size: 12px;
+  text-align: end;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.arrow {
   width: 1px;
   height: 100px;
-  background: rgba(255, 255, 255, .4);
+  margin: 50px auto 0;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
 }
-.scroll::after {
-  animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+
+.arrow::before {
+  content: '';
+  width: 1px;
+  height: 100px;
+  margin: 50px auto 0;
+  background-color: #000;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  -webkit-animation: arrow 2.5s ease 0s infinite normal;
+  animation: arrow 2.5s ease 0s infinite normal;
 }
-@keyframes sdl {
+
+@keyframes arrow {
   0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
+
+  60% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+    transform: translate3d(-50%, 100px, 0);
   }
-  50.1% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
-  }
+
   100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
+    -webkit-transform: translate3d(-50%, 100px, 0);
+    transform: translate3d(-50%, 100px, 0);
   }
 }
 </style>
@@ -114,7 +148,14 @@
       <h1><a href="https://www.genserver.work/global/" title="GenServer Global Lab"><img src="https://www.genserver.work/global/p/uploads/img/logo.png"></a></h1>
     </div>
   </header>
-<a href="#" class="scroll">Scroll</a>
+<div class="box">
+  <div class="arrowWrap">
+    <div class="arrowInner">
+      <p>SCROLL DOWN</p>
+      <div class="arrow"></div>
+    </div>
+  </div>
+</div>
   <section class="posts">
     <div class="posts_inner" style="">
       <ul class="grid">
