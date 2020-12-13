@@ -21,6 +21,38 @@
   <style>
     .tk-source-han-sans-japanese{font-family:"source-han-sans-japanese",sans-serif;}
   </style>
+  <style>
+.scroll::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: rgba(255, 255, 255, .4);
+}
+.scroll::after {
+  animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+</style>
   <script>
     (function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);
   </script>
@@ -82,6 +114,7 @@
       <h1><a href="https://www.genserver.work/global/" title="GenServer Global Lab"><img src="https://www.genserver.work/global/p/uploads/img/logo.png"></a></h1>
     </div>
   </header>
+<a href="#" class="scroll">Scroll</a>
   <section class="posts">
     <div class="posts_inner" style="">
       <ul class="grid">
