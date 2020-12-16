@@ -19,6 +19,10 @@ a {
     color: black;
 }
 
+.italic {
+    font-style: italic;
+}
+
 /*ヘッダ*/
 header {
     background-image: url(img/header.png);
