@@ -1,16 +1,16 @@
 <form><input type="button" value="今年の一文字" onClick="random()"> 
-<div  id="omikuji"></div>>
+<div  id="omikuji"></div>
     </form>
     
     <script type="text/javascript">
     function random() {
     var rand = Math.floor( Math.random() * 5) ; //おみくじの目の生成
-        if (rand == 0) msg = '<a href="https://www.genserver.work/omikuji/0_Test.html">';
-        if (rand == 1) msg = '<a href="https://www.genserver.work/omikuji/1_Test.html">';
-        if (rand == 2) msg = '<a href="https://www.genserver.work/omikuji/2_Test.html">';
-        if (rand == 3) msg = '<a href="https://www.genserver.work/omikuji/3_Test.html">';
-        if (rand == 4) msg = '<a href="https://www.genserver.work/omikuji/4_Test.html">';
-        if (rand == 5) msg = '<a href="https://www.genserver.work/omikuji/5_Test.html">';
+        if (rand == 0) msg = '<a href="https://www.genserver.work/omikuji/0_Test.html">結果を表示</a>';
+        if (rand == 1) msg = '<a href="https://www.genserver.work/omikuji/1_Test.html">結果を表示</a>';
+        if (rand == 2) msg = '<a href="https://www.genserver.work/omikuji/2_Test.html">結果を表示</a>';
+        if (rand == 3) msg = '<a href="https://www.genserver.work/omikuji/3_Test.html">結果を表示</a>';
+        if (rand == 4) msg = '<a href="https://www.genserver.work/omikuji/4_Test.html">結果を表示</a>';
+        if (rand == 5) msg = '<a href="https://www.genserver.work/omikuji/5_Test.html">結果を表示</a>';
     document.getElementById("omikuji").innerHTML = msg; //おみくじの目の出力
     }
     </script>
