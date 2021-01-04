@@ -1,16 +1,15 @@
-<div id="omikuji"></div>
-<form><input type="button" value="今年の一文字" onClick="random()"> 
+<form><input type="button" value="今年の一文字" onClick="random()"  id="omikuji"> 
     </form>
     
     <script type="text/javascript">
     function random() {
     var rand = Math.floor( Math.random() * 5) ; //おみくじの目の生成
-        if (rand == 0) msg = '<head><meta http-equiv="refresh" content="0";url=https://www.genserver.work/omikuji/0_Test.html"></head>';
-        if (rand == 1) msg = '<head><meta http-equiv="refresh" content="0";url=https://www.genserver.work/omikuji/1_Test.html"></head>';
-        if (rand == 2) msg = '<head><meta http-equiv="refresh" content="0";url=https://www.genserver.work/omikuji/2_Test.html"></head>';
-        if (rand == 3) msg = '<head><meta http-equiv="refresh" content="0";url=https://www.genserver.work/omikuji/3_Test.html"></head>';
-        if (rand == 4) msg = '<head><meta http-equiv="refresh" content="0";url=https://www.genserver.work/omikuji/4_Test.html"></head>';
-        if (rand == 5) msg = '<head><meta http-equiv="refresh" content="0";url=https://www.genserver.work/omikuji/5_Test.html"></head>';
+        if (rand == 0) msg = '<a href="https://www.genserver.work/omikuji/0_Test.html">';
+        if (rand == 1) msg = '<a href="https://www.genserver.work/omikuji/1_Test.html">';
+        if (rand == 2) msg = '<a href="https://www.genserver.work/omikuji/2_Test.html">';
+        if (rand == 3) msg = '<a href="https://www.genserver.work/omikuji/3_Test.html">';
+        if (rand == 4) msg = '<a href="https://www.genserver.work/omikuji/4_Test.html">';
+        if (rand == 5) msg = '<a href="https://www.genserver.work/omikuji/5_Test.html">';
     document.getElementById("omikuji").innerHTML = msg; //おみくじの目の出力
     }
     </script>
