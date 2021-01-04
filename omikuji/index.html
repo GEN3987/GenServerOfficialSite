@@ -1,22 +1,76 @@
 <style>
-    a {
-    background-color: transparent;
-    color: #161616;
+.mkj-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.25s linear, transform 0.25s linear;
+  text-decoration: none;
+  border: 10px solid #FFE566;
+  background-color: #fff;
+  box-shadow: 4px 6px 0 0 #000;
+  width: 400px;
+  height: 80px;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.mkj-btn:link {
+  color: #000;
+}
+
+.mkj-btn:hover {
+  transform: translate(2px, 4px);
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+.btn_1 {
+    width:200px;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    padding:8px 0 10px;
+    color:black;
+    background-color:#FFE566;
+    border-radius:5px;
 }
 </style>
-<form><input type="button" value="今年の一文字" onClick="random()"> 
+<center>
+    <br><br><br><br><br><h1>おみくじを引く<br>現在開発中です。</h1>
+<form><input type="button" class="btn_1" value="ここをクリック" onClick="random()"> 
+    <br><br><br><br><br>
 <div  id="omikuji"></div>
     </form>
     
+</center>
     <script type="text/javascript">
     function random() {
-    var rand = Math.floor( Math.random() * 5) ; //おみくじの目の生成
-        if (rand == 0) msg = '<a href="https://www.genserver.work/omikuji/0_Test.html">結果を表示</a>';
-        if (rand == 1) msg = '<a href="https://www.genserver.work/omikuji/1_Test.html">結果を表示</a>';
-        if (rand == 2) msg = '<a href="https://www.genserver.work/omikuji/2_Test.html">結果を表示</a>';
-        if (rand == 3) msg = '<a href="https://www.genserver.work/omikuji/3_Test.html">結果を表示</a>';
-        if (rand == 4) msg = '<a href="https://www.genserver.work/omikuji/4_Test.html">結果を表示</a>';
-        if (rand == 5) msg = '<a href="https://www.genserver.work/omikuji/5_Test.html">結果を表示</a>';
+    var rand = Math.floor( Math.random() * 21) ; //おみくじの目の生成
+        if (rand == 0) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/0_Test.html">結果を表示</a>';
+        if (rand == 1) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/1_Test.html">結果を表示</a>';
+        if (rand == 2) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/2_Test.html">結果を表示</a>';
+        if (rand == 3) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/3_Test.html">結果を表示</a>';
+        if (rand == 4) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/4_Test.html">結果を表示</a>';
+        if (rand == 5) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/5_Test.html">結果を表示</a>';
+        if (rand == 6) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/6_Test.html">結果を表示</a>';
+        if (rand == 7) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/7_Test.html">結果を表示</a>';
+        if (rand == 8) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/8_Test.html">結果を表示</a>';
+        if (rand == 9) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/9_Test.html">結果を表示</a>';
+        if (rand == 10) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/10_Test.html">結果を表示</a>';
+        if (rand == 11) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/11_Test.html">結果を表示</a>';
+        if (rand == 12) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/12_Test.html">結果を表示</a>';
+        if (rand == 13) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/13_Test.html">結果を表示</a>';
+        if (rand == 14) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/14_Test.html">結果を表示</a>';
+        if (rand == 15) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/15_Test.html">結果を表示</a>';
+        if (rand == 16) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/16_Test.html">結果を表示</a>';
+        if (rand == 17) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/17_Test.html">結果を表示</a>';
+        if (rand == 18) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/18_Test.html">結果を表示</a>';
+        if (rand == 19) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/19_Test.html">結果を表示</a>';
+        if (rand == 20) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/20_Test.html">結果を表示</a>';
+        if (rand == 21) msg = '<a class="mkj-btn" href="https://www.genserver.work/omikuji/21_Test.html">結果を表示</a>';
     document.getElementById("omikuji").innerHTML = msg; //おみくじの目の出力
     }
     </script>
