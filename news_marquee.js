@@ -1,4 +1,4 @@
-    <script type="text/javascript">
+
         window.onload = function onLoad() {
             param = GetQueryString();
             target = document.getElementById("param");
@@ -29,4 +29,3 @@
             }
             return null;
         }
-    </script>
