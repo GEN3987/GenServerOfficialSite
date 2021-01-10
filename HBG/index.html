@@ -1,0 +1,163 @@
+<style>
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 78.195%;
+  }
+}
+
+body {
+  font-size: 1.2rem;
+  line-height: 1.75em;
+}
+
+.cdt_wrapper {
+  background-color: #e9e9eb;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .cdt_wrapper {
+    line-height: 2.5;
+    font-size: 1.8rem;
+    padding: 0 20px;
+  }
+}
+
+.cdt_wrapper small {
+  font-size: .6em;
+  padding: 0 .4em;
+}
+
+.cdt {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.cdt_txt {
+  font-size: .6em;
+  display: inline-block;
+  margin-right: .6em;
+}
+
+@media screen and (min-width: 768px) {
+  .cdt_txt {
+    font-size: .5em;
+  }
+}
+
+.cdt_txt span {
+  display: block;
+  line-height: 1;
+}
+
+.cdt_date {
+  font-size: 1.6rem;
+}
+
+.cdt_num {
+  background-color: #ffffff;
+  /* font-size: 18px; */
+  padding: 0 .15em;
+}
+
+@media screen and (min-width: 768px) {
+  .cdt_num {
+    line-height: 1;
+    padding: .3em .15em;
+  }
+}
+</style>
+
+<div class="cdt_wrapper">
+  <div class="cdt">
+    <span class="cdt_txt" id="cdt_txt"></span>
+    <span class="cdt_date" id="cdt_date"></span>
+  </div>
+</div>
+
+<script>
+// ▼ カウントダウンタイマーの設定 ▼ //
+function CountdownTimer(elm, tl, mes) {
+  this.initialize.apply(this, arguments);
+}
+CountdownTimer.prototype = {
+  initialize: function (elm, tl, mes) {
+    this.elem = document.getElementById(elm);
+    this.tl = tl;
+    this.mes = mes;
+  },
+  countDown: function () {
+    var timer = '';
+    var today = new Date();
+    var day = Math.floor((this.tl - today) / (24 * 60 * 60 * 1000));
+    var hour = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+    var min = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 1000)) % 60;
+    var sec = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 1000) % 60 % 60;
+    var milli = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 10) % 100;
+    var me = this;
+
+    if ((this.tl - today) > 0) {
+if (day) timer += '<span class="cdt_num">' + day + '</span><small>日と</small>';
+      if (hour) timer += '<span class="cdt_num">' + hour + '</span><small>時間</small>';
+      timer += '<span class="cdt_num">' + this.addZero(min) + '</span><small>分</small><span class="cdt_num">' + this.addZero(sec) + '</span><small>秒</small><span class="cdt_num milli">' + this.addZero(milli) + '</span>';
+      this.elem.innerHTML = timer;
+      tid = setTimeout(function () {
+        me.countDown();
+      }, 10);
+    } else {
+      this.elem.innerHTML = this.mes;
+      return;
+    }
+  },
+  addZero: function (num) {
+    return ('0' + num).slice(-2);
+  }
+}
+
+// ▼ 開始＆終了日時の指定と日付の判別
+function CDT() {
+  var myD = Date.now(); // 1970/1/1午前0時から現在までのミリ秒
+  var start = new Date('2018-11-05T00:00+09:00'); // 開始日時の指定
+  var myS = start.getTime(); // 1970/1/1午前0時からの開始日時までのミリ秒
+  var end = new Date('2021-01-19T23:59+09:00'); // 終了日時の指定
+  var myE = end.getTime(); // 1970/1/1午前0時から終了日時までのミリ秒
+
+  // 今日が開始日前か期間中か終了日後かの判別
+  if (myS <= myD && myE >= myD) {
+    var text = '<span>終了</span><span>まで</span>';
+    var tl = end;
+  } // 期間中
+  else if (myS > myD) {
+    var text = '<span>開催</span><span>まで</span>';
+    var tl = start;
+  } // 開始日前
+  else {
+    var text = "";
+  } // 終了日後
+
+  var timer = new CountdownTimer('cdt_date', tl, '終了しました</small>'); // 終了日後のテキスト
+  timer.countDown();
+  target = document.getElementById("cdt_txt");
+  target.innerHTML = text;
+}
+window.onload = function () {
+  CDT();
+}
+</script>
