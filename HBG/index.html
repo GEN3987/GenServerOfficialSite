@@ -114,9 +114,9 @@ CountdownTimer.prototype = {
     var me = this;
 
     if ((this.tl - today) > 0) {
-if (day) timer += '<span class="cdt_num">' + day + '</span><small>日と</small>';
-      if (hour) timer += '<span class="cdt_num">' + hour + '</span><small>時間</small>';
-      timer += '<span class="cdt_num">' + this.addZero(min) + '</span><small>分</small><span class="cdt_num">' + this.addZero(sec) + '</span><small>秒</small><span class="cdt_num milli">' + this.addZero(milli) + '</span>';
+if (day) timer += '<span class="cdt_num">' + day + '</span><small>:</small>';
+      if (hour) timer += '<span class="cdt_num">' + hour + '</span><small>:</small>';
+      timer += '<span class="cdt_num">' + this.addZero(min) + '</span><small>:</small><span class="cdt_num">' + this.addZero(sec) + '</span><small>:</small><span class="cdt_num milli">' + this.addZero(milli) + '</span>';
       this.elem.innerHTML = timer;
       tid = setTimeout(function () {
         me.countDown();
@@ -134,14 +134,14 @@ if (day) timer += '<span class="cdt_num">' + day + '</span><small>日と</small>
 // ▼ 開始＆終了日時の指定と日付の判別
 function CDT() {
   var myD = Date.now(); // 1970/1/1午前0時から現在までのミリ秒
-  var start = new Date('2018-11-05T00:00+09:00'); // 開始日時の指定
+  var start = new Date('2021-01-05T00:00+09:00'); // 開始日時の指定
   var myS = start.getTime(); // 1970/1/1午前0時からの開始日時までのミリ秒
   var end = new Date('2021-01-19T23:59+09:00'); // 終了日時の指定
   var myE = end.getTime(); // 1970/1/1午前0時から終了日時までのミリ秒
 
   // 今日が開始日前か期間中か終了日後かの判別
   if (myS <= myD && myE >= myD) {
-    var text = '<span>終了</span><span>まで</span>';
+    var text = '<span>誕生</span><span>まで</span>';
     var tl = end;
   } // 期間中
   else if (myS > myD) {
@@ -152,7 +152,7 @@ function CDT() {
     var text = "";
   } // 終了日後
 
-  var timer = new CountdownTimer('cdt_date', tl, '終了しました</small>'); // 終了日後のテキスト
+  var timer = new CountdownTimer('cdt_date', tl, 'Happy Birthday GEN3987!!</small>'); // 終了日後のテキスト
   timer.countDown();
   target = document.getElementById("cdt_txt");
   target.innerHTML = text;
