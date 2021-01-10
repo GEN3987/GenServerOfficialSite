@@ -1,8 +1,8 @@
 
         window.onload = function onLoad() {
-            param = GetQueryString();
-            target = document.getElementById("param");
-            target.innerHTML = param["q"];
+            news = GetQueryString();
+            target = document.getElementById("news");
+            target.innerHTML = news["news"];
 
         }
 
