@@ -15,14 +15,8 @@
 <link rel="shortcut icon" href="https://www.genserver.work/img/icon.png">
 <title>GEN3987HappyBirthday2021</title>
 <link href="./style.css" rel="stylesheet" type="text/css">
-<script src="./script.js"></script>
-<script src="./app.js"></script>
-<script src="./particles.min.js"></script>
-<script src="./stats.js"></script>
 </head>
 
-
-<div id="particles-js"></div>
 
 <h1><center><br><br><br><div class="cdt_wrapper">
   <div class="cdt">
@@ -100,23 +94,4 @@ function CDT() {
 window.onload = function () {
   CDT();
 }
-</script>
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
 </script>
