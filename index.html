@@ -20,7 +20,7 @@
 <link href="./style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.genserver.work/jquery.skippr.css">    
 <style>
-.scroll::before {
+.scroll-b::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -29,7 +29,7 @@
   height: 100px;
   background: rgba(255, 255, 255, .4);
 }
-.scroll::after {
+.scroll-b::after {
   animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
 @keyframes sdl {
@@ -51,7 +51,7 @@
   }
 }
 
-.scroll {
+.scroll-b {
   display: inline-block;
   position: absolute;
   right: 40px;
@@ -59,7 +59,7 @@
   z-index: 2;
   padding: 10px 10px 110px;
   overflow: hidden;
-  color: #fff;
+  color: black;
   font-size: 14px;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1;
@@ -68,14 +68,14 @@
   text-decoration: none;
   writing-mode: vertical-lr;
 }
-.scroll::after {
+.scroll-b::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 1px;
   height: 100px;
-  background: #fff;
+  background: black;
 }
 
 .full {
@@ -474,7 +474,7 @@ h3 {
 	
 	<main id="main">
   <div class="full">
-<div class="scroll">
+<div class="scroll-b">
 <a href="#">SCROLL >></a>
 </div>
 </div>		
