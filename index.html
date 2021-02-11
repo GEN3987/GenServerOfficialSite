@@ -19,12 +19,6 @@
 <link href="./perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
 <link href="./style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.genserver.work/jquery.skippr.css">    
-<script>
-window.onload = function() {
-  const spinner = document.getElementById('loading');
-  spinner.classList.add('loaded');
-}
-</script>
 <style>
 
 .scroll-b::before {
@@ -411,7 +405,6 @@ h3 {
 </head>
 <body class="">
 
-
 <div id="nav-toggle">
 	<div>
 		<span></span>
@@ -628,4 +621,30 @@ GenServer関係
 <script src="./velocity.min.js"></script>
 <script src="./perfect-scrollbar.jquery.min.js"></script>
 <script src="./slide.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(function () {
+
+        // サイドサブメニューアコーディオン
+        $('.sub-menu-head').on('click', function(){
+            var $subNav = $(this).next('.sub-menu-nav');
+            if ($subNav.is(':visible')) {
+                $subNav.velocity('slideUp', {duration: 200});
+                $(this).parent('li').removeClass('is-active');
+            }
+            else {
+                $subNav.velocity('slideDown', {duration: 200});
+                $(this).parent('li').addClass('is-active');
+            }
+            return false;
+        });
+
+        $('#nav-toggle').on('click', function() {
+            $('body').toggleClass('close');
+        });
+
+        $('.scroll').perfectScrollbar();
+    });
+})(jQuery);
+</script>
 </body></html>
