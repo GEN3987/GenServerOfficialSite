@@ -27,8 +27,9 @@
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #000;
-  z-index: 1;
+  background-image: url(https://www.genserver.work/img/top.png);
+  z-index: 99999999;
+  background-size: cover;
 }
 #loader {
   display: none;
@@ -41,7 +42,7 @@
   margin-left: -100px;
   text-align: center;
   color: #fff;
-  z-index: 2;
+  z-index: 999999999;
 }
 
 .scroll-b::before {
@@ -430,8 +431,7 @@ h3 {
 
 <div id="loader-bg">
   <div id="loader">
-    <img src="https://www.genserver.work/img/loading.gif" width="80" height="80" alt="Now Loading..." />
-    <p>Now Loading...</p>
+    <img src="https://www.genserver.work/img/loading.gif" width="100" height="100" alt="Now Loading..." />
   </div>
 </div>
 <div id="wrap">
