@@ -1,0 +1,92 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-flat-logo {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #00bcd4;
+  transition: .4s;
+}
+
+.swiper-container {
+  padding: 30px 0 50px;
+  background: #eeeeee;
+}
+
+.s-three-wrap {
+  position: relative;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.s-three-text,
+.s-three-sub,
+.s-three-button {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: white;
+}
+
+.s-three-text {
+  top: 20%;
+  font-size: 5vw;
+}
+
+.s-three-sub {
+  top: 55%;
+  font-size: 2vw;
+}
+
+.s-three-button {
+  top: 75%;
+  left: calc( 50% - 75px );
+  display: block;
+  width: 150px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background: #535353;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+.s-three-button:hover {
+  background: white;
+  color: #1b1b1b;
+}
+
+.swiper-slide-active .s-three-text {
+  animation: slideFromRight 1.5s ease 0s 1 normal;
+}
+.swiper-slide-active .s-three-sub {
+  animation: slideFromRightSub 2.0s ease 0s 1 normal;
+}
+.swiper-slide-active .s-three-button {
+  animation: slideFromRightBtn 2.5s ease 0s 1 normal;
+}
+
+@keyframes slideFromRightBtn {
+  0%, 65% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
