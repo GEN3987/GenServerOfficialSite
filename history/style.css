@@ -948,8 +948,8 @@ img, video, svg {
 body {
   font-size: 1em;
   font-size: var(--text-base-size, 1em);
-  font-family: 'Droid Serif', serif;
-  font-family: var(--font-primary, sans-serif);
+  font-family: heisei-maru-gothic-std, sans-serif;
+  font-family: heisei-maru-gothic-std, sans-serif;
   color: hsl(240, 4%, 20%);
   color: var(--color-contrast-high, #313135)
 }
@@ -3437,13 +3437,13 @@ mark {
   color: var(--cd-color-3);
   background-color: hsl(205, 38%, 93.45%);
   background-color: hsl(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*1.05));
-  font-family: 'Droid Serif', serif;
-  font-family: var(--font-primary)
+  font-family: heisei-maru-gothic-std, sans-serif;
+  font-family: heisei-maru-gothic-std, sans-serif;
 }
 
 .cd-timeline h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-family: var(--font-secondary);
+  font-family: heisei-maru-gothic-std, sans-serif;
+  font-family: heisei-maru-gothic-std, sans-serif;
   font-weight: 700
 }
 
