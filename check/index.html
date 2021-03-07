@@ -1,1 +1,51 @@
+<script>
+var database = firebase.database();
+let room = "check";
+const send = document.getElementById("send");
+const name = document.getElementById("name");
+const message = document.getElementById("message");
+const output = document.getElementById("output");
+//受信処理
+database.ref(room).on("child_added", function(data) {
+   const v = data.val();
+   const k = data.key;
+   let str = "";
+   str += '<h1>現在のサーバーの状況：'</h1><hr>';
+   output.innerHTML += str;
+});
+</script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBoIEGBs4jMx0FHTL8SvPoyP34MUvFA3v0",
+    authDomain: "chat-12580.firebaseapp.com",
+    databaseURL: "https://chat-12580.firebaseio.com",
+    projectId: "chat-12580",
+    storageBucket: "chat-12580.appspot.com",
+    messagingSenderId: "27751431828",
+    appId: "1:27751431828:web:25551d2098b926f2bb7e81",
+    measurementId: "G-97E11G9VLX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
+
+<script>
+function test(){
+  var a = document.documentElement;
+  var y = a.scrollHeight - a.clientHeight;
+  window.scroll(0, y);
+}
+</script>
+<div id="output"></div>
