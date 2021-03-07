@@ -10,7 +10,7 @@ database.ref(room).on("child_added", function(data) {
    const v = data.val();
    const k = data.key;
    let str = "";
-   str += '<h1>現在のサーバーの状況：'</h1><hr>';
+   str += '<h1>現在のサーバーの状況：' + message + '</h1>';
    output.innerHTML += str;
 });
 </script>
