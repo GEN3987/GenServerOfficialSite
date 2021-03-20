@@ -3,14 +3,19 @@
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="shortcut icon" href="https://www.genserver.work/img/icon.png">
-<title>GenServer - News | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"> <link rel="shortcut icon" href="https://www.genserver.work/img/icon.png">
+<title>GenServer - Q&A | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
 <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">-->
 <link href="https://www.genserver.work/css" rel="stylesheet" type="text/css">
 <link href="https://www.genserver.work/css.css" rel="stylesheet" type="text/css">
 <link href="https://www.genserver.work/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
 <link href="https://www.genserver.work/style.css" rel="stylesheet" type="text/css">
+<!-- SweetAlert2の本体-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
+<!-- SweetAlert2のCSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css">
+<!-- IE11やAndroidブラウザ用のjsファイル-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 <style>
 * {
 	margin: 0;
@@ -363,11 +368,9 @@ body {
   opacity: 0.8;
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 </head>
-<body>
+<body class="">
+
 <div id="nav-toggle">
 	<div>
 		<span></span>
@@ -375,6 +378,7 @@ body {
 		<span></span>
 	</div>
 </div>
+
 <aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="5e596c5f-5466-9f4b-ce13-d333405a2594">
 	<nav id="global-nav">
 		<ul>
@@ -412,16 +416,39 @@ body {
 					<li><a href="https://www.genserver.work/contact/">サーバーへの問い合わせ</a></li>
 				</ul>
 			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">連携サーバー一覧</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://www.genserver.work/rinrins-server">Rinrin's Server</a></li>
+					<li><a href="https://www.genserver.work/usfantasyserver/">US FantasyServer</a></li>
+				</ul>
+			</li>
 			<li><a href="https://www.genserver.work/terms/">利用規約</a></li>
 			<li><a href="https://www.genserver.work/privacy-policy/">プライバシーポリシー</a></li>
 		</ul>
 	</nav>
 <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
+
+
+<div id="container">
+	<header id="global-head">
+		<h1 id="brand-logo">GenServer</h1>
+	</header>
+	
+	<main id="main">
+		<div id="main-visual">
+<h3>Q & A</h3>
+<p>よくある質問をまとめました。</p>
+</div>		
+		<section class="inner">
 <center>
 <br><br>
-<h1>Q & A</h1>
-<p>よくある質問をまとめました。</p>
 <input type="button" class="reset button-arrow-inner" id="sample_btn" onclick="kaiketu_1()" value="世界に接続中の画面で固まってます。">
+<br>
+<input type="button" class="reset button-arrow-inner" id="sample_btn" onclick="mikaiketu()" value="質問②">
+</center>
+<body>
+
 <script>
 function kaiketu_1() {
     swal({
@@ -430,10 +457,7 @@ function kaiketu_1() {
         type: 'success',
     });
 }
-</script>
-<br>
-<input type="button" class="reset button-arrow-inner" id="sample_btn" onclick="mikaiketu()" value="質問②">
-<script>
+
 function mikaiketu() {
     swal({
         title: '質問の内容',
@@ -442,8 +466,12 @@ function mikaiketu() {
     });
 }
 </script>
-</center>
-<body>
+		</section>
+
+	</main>
+</div><!-- /#container -->
+
+
 
 
 <script src="https://www.genserver.work/jquery.min.js"></script>
@@ -476,4 +504,5 @@ function mikaiketu() {
 })(jQuery);
 </script>
 
-</html>
+
+</body></html>
