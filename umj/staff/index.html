@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.genserver.work/img/icon.png">
+<title>GenServer - 管理者一覧 | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GenServer Official Site">
+<meta property="og:title" content="GenServer - 管理者一覧 | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。">
+<meta property="og:url" content="https://www.genserver.work/managers/">
+<meta property="og:description" content="GenServerオフィシャルサイト">
+<meta property="og:image" content="https://www.genserver.work/img/icon.png">
+<meta name="keywords" content="GenServer.genserver.GENSERVER,GENServer,げんさーばー,ゲンサーバー,minecraft,GEN3987,GEN,GenServerwork,GenServerサイト,minecraftbe">
+
+<!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">-->
+<link href="https://www.genserver.work/managers/css" rel="stylesheet" type="text/css">
+<link href="https://www.genserver.work/managers/css.css" rel="stylesheet" type="text/css">
+<link href="https://www.genserver.work/managers/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+<link href="https://www.genserver.work/managers/style.css" rel="stylesheet" type="text/css">
+<style>
+
+.imgWrap {
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	width: 180px;	/*画像の幅*/
+}
+.imgWrap img {
+	display: block;
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+.imgWrap img:hover {
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+div#parent{}
+div#parent div.child_flame{clear:both;}
+div#parent div.child{
+   float:left;
+   margin: 10px;
+}
+img:not(.not) {width:180px;}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+}
+body {
+	font-size: 14px;
+	font-family: 'Lato','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+	background: #eee;
+}
+
+
+#container {
+	background: #eee;
+	margin-left: 260px;
+	position: relative;
+	-moz-transition: margin-left .25s linear;
+	-webkit-transition: margin-left .25s linear;
+	transition: margin-left .25s linear;
+}
+#main {
+	background: #eee;
+	padding-top: 50px;
+	min-height: 1400px;
+}
+#main p {
+	margin-bottom: 1em;
+	line-height: 1.9;
+}
+#main .inner {
+	padding: 60px;
+}
+
+/* main-visual */
+#main-visual {
+	background: #64CE80;
+	background: -webkit-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: -moz-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: -ms-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: -o-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: linear-gradient(-45deg, #64CE80, #C68BC4);
+
+
+	height: 400px;
+	display: flex;
+
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#main-visual h2 {
+	font-size: 21px;
+	color: #fff;
+}
+h3 {
+	font-size: 131%;
+	margin-bottom: .7em;
+}
+#copyright a {
+	color: #666;
+	text-decoration: none;
+}
+#copyright a:hover {
+	text-decoration: underline;
+}
+
+#global-head {
+	position: fixed;
+	color: #142424;
+	width: 100%;
+        z-index: 100;
+	padding: 10px 30px;
+	background: #fff;
+	display: -webkit-flex;
+	display: flex;
+}
+
+#sidebar {
+	padding-top: 60px;
+	width: 260px;
+	height: 100%;
+	position: fixed;
+	color: #afc3f2;
+	background: #142424;
+}
+
+#brand-logo {
+	-webkit-transition: .35s ease-in-out;
+	-moz-transition: .35s ease-in-out;
+	transition: .35s ease-in-out;
+}
+
+#global-nav ul {
+	list-style: none;
+	margin-left: 0;
+}
+#global-nav > ul > li {
+	position: relative;
+}
+
+#global-nav a {
+	color: #aeb4cb;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	-moz-transition: color .3s linear;
+	-webkit-transition: color .3s linear;
+	transition: color .3s linear;
+}
+#global-nav .sub-menu.is-active > a,
+#global-nav a:hover {
+	color: #fff;
+	/*background: #fff;*/
+}
+
+
+/* sub-menu icon */
+#global-nav .sub-menu-head {
+	position: relative;
+}
+#global-nav .sub-menu-head:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 18px;
+	margin: auto;
+	vertical-align: middle;
+	width: 8px;
+	height: 8px;
+	border-top: 1px solid #aeb4cb;
+	border-right: 1px solid #aeb4cb;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+#global-nav .sub-menu.is-active > a:after,
+#global-nav .sub-menu-head:hover:after {
+	border-color: #fff;
+}
+
+#global-nav .is-active .sub-menu-head:after {
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+/* sub-menu */
+#global-nav .sub-menu-nav {
+	background: #142424;
+
+	display: none;
+	padding: 10px 0;
+
+	/*-moz-transition: all .4s ease;*/
+	/*-webkit-transition: all .4s ease;*/
+	/*transition: all .4s ease;*/
+}
+
+
+#global-nav .sub-menu-nav a {
+	color: #afc3f2;
+	padding: 8px 15px;
+}
+#global-nav .sub-menu-nav a:hover {
+	color: #fff;
+}
+
+
+/* nav-toggle */
+#nav-toggle {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	height: 32px;
+}
+#nav-toggle > div {
+	position: relative;
+	width: 32px;
+}
+#nav-toggle span {
+	width: 100%;
+	height: 2px;
+	left: 0;
+	display: block;
+	background: #fff;
+	position: absolute;
+	-webkit-transition: .35s ease-in-out;
+	-moz-transition: .35s ease-in-out;
+	transition: .35s ease-in-out;
+}
+
+/* #nav-toggle close */
+#nav-toggle span:nth-child(1) {
+	top: 0;
+	/*
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+	*/
+}
+#nav-toggle span:nth-child(2) {
+	top: 11px;
+	/*
+	width: 0;
+	left: 50%;
+	*/
+}
+#nav-toggle span:nth-child(3) {
+	top: 22px;
+	/*
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	*/
+}
+
+/*
+.close #nav-toggle span:nth-child(1) {
+	top: 0;
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	transform: rotate(0);
+}
+.close #nav-toggle span:nth-child(2) {
+	width: 100%;
+	left: 0;
+}
+.close #nav-toggle span:nth-child(3) {
+	top: 22px;
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	transform: rotate(0);
+}
+*/
+
+
+/* z-index */
+#nav-toggle {
+	z-index: 1000;
+}
+#container {
+	z-index: 900;
+}
+
+/* close */
+.close #container {
+	margin-left: 0;
+}
+.close #brand-logo {
+	margin-left: 50px;
+}
+.close #nav-toggle span {
+	background: #142424;
+}
+
+@media screen and (max-width: 900px) {
+	#container {
+		margin-left: 0;
+	}
+	#brand-logo {
+		margin-left: 50px;
+	}
+	#nav-toggle span {
+		background: #142424;
+	}
+	.close #nav-toggle span {
+		background: #fff;
+	}
+
+	#sidebar {
+		left: -260px;
+		z-index: 910;
+		-webkit-transition: .35s ease-in-out;
+		-moz-transition: .35s ease-in-out;
+		transition: .35s ease-in-out;
+	}
+	.close #sidebar {
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+}
+</style>
+</head>
+<body class="">
+
+<div id="nav-toggle">
+	<div>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+
+<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="5e596c5f-5466-9f4b-ce13-d333405a2594">
+	<nav id="global-nav">
+		<ul>
+
+			<li><a href="https://www.genserver.work/">トップ</a></li>
+			<li class="sub-menu">
+								<a href="#" class="sub-menu-head">初めての方へ</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://www.genserver.work/tutorial/">チュートリアル</a></li>
+					<li><a href="https://www.genserver.work/how-to-join/">サーバーへの接続方法</a></li>
+					<li><a href="https://www.genserver.work/rules/">サーバーの決まり(ルール)</a></li>
+					<li><a href="https://www.genserver.work/join-discord/">公式Discordグループについて</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">ゲーム情報</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://www.genserver.work/managers/">GenServer管理委員会 - 管理者一覧</a></li>
+					<li><a href="https://www.genserver.work/punishments/">処罰データ</a></li>
+					<li><a href="https://www.genserver.work/news/">ニュース</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">RPGエリア</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://www.genserver.work/tws-build/">建築スタッフ募集ページ</a></li>
+					<li><a href="https://www.genserver.work/tws-trailer/">予告編(動画)</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">お問い合わせ</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://www.genserver.work/support/">サポートシステム(Q&A)</a></li>
+					<li><a href="https://www.genserver.work/contact/">サーバーへの問い合わせ</a></li>
+				</ul>
+			</li>
+			<li><a href="https://www.genserver.work/terms/">利用規約</a></li>
+			<li><a href="https://www.genserver.work/privacy-policy/">プライバシーポリシー</a></li>
+		</ul>
+	</nav>
+<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
+
+
+<div id="container">
+	<header id="global-head">
+		<h1 id="brand-logo">UNIVERSAL MINECRAFT JAPAN</h1>
+	</header>
+	
+	<main id="main">	
+
+<main id="main">
+		<div id="main-visual">
+			<h3>スタッフ一覧</h3>
+</div>		
+
+<section class="inner">
+  <h3>現在稼働中の運営ユーザ</h3>
+  <h4>&nbsp;<br> もし困ったことがありましたら、ログインしている運営までお声掛け下さい。<br> 項目をクリックすると、各ユーザの紹介ページへ移動します。</h4>
+  <center>
+    <div id="parent">
+      <div class="child_flame">
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="child_flame">
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.genserver.work/umj/staff/#">
+          <div class="child">
+            <div class="imgWrap"> <img src="https://www.genserver.work/managers/steve.png"><br>
+              <h1>登録されていません</h1>
+              <font color="#6e6e6e">
+                <p>登録されていません</p>
+              </font>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </center>
+</section>
+
+
+	</main>
+</div><!-- /#container -->
+
+
+
+
+<script src="https://www.genserver.work/managers/jquery.min.js"></script>
+<script src="https://www.genserver.work/managers/velocity.min.js"></script>
+<script src="https://www.genserver.work/managers/perfect-scrollbar.jquery.min.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(function () {
+
+        // サイドサブメニューアコーディオン
+        $('.sub-menu-head').on('click', function(){
+            var $subNav = $(this).next('.sub-menu-nav');
+            if ($subNav.is(':visible')) {
+                $subNav.velocity('slideUp', {duration: 200});
+                $(this).parent('li').removeClass('is-active');
+            }
+            else {
+                $subNav.velocity('slideDown', {duration: 200});
+                $(this).parent('li').addClass('is-active');
+            }
+            return false;
+        });
+
+        $('#nav-toggle').on('click', function() {
+            $('body').toggleClass('close');
+        });
+
+        $('.scroll').perfectScrollbar();
+    });
+})(jQuery);
+</script>
+
+
+</body></html>
