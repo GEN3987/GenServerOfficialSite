@@ -1,3 +1,13 @@
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
 body {
 background-color: #eff0f3;
     font-family: 'Lato','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
@@ -178,4 +188,3 @@ background-color: #eff0f3;
     color: #ffffff;
 }
 
- a {text-decoration:none;}
