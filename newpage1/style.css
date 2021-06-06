@@ -41,3 +41,7 @@ background-color: #eff0f3;
     font-size: 0.9em;
     padding-top: 0.9em;
 }
+
+a {
+    text-decoration:none; 
+}
