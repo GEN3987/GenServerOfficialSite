@@ -17,15 +17,57 @@ background-color: #eff0f3;
   width: 75%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.padding1 {
+    padding: 2% 5% 2% 5%;
+}
+
 .item {
     border: 1px solid #ccc;
-    width: 266px;
+    width: 32%;
     margin: 3px;
     background-color: white;
     position: relative;
     word-wrap: break-word;
-    padding: 2% 5% 2% 5%;
     text-align: left;
+}
+
+@media only screen and (max-device-width: 480px) {
+.item {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+ }
+}
+
+.item-small {
+    border: 1px solid #ccc;
+    width: 15%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+@media only screen and (max-device-width: 480px) {
+.item-small {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+ }
 }
 
 .content {
