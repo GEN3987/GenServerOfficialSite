@@ -2,6 +2,30 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
 }
 
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#fff; 
+  z-index: 9999;  
+  pointer-events: none; 
+  opacity: 0; 
+  -webkit-transition: opacity .8s ease;  
+  transition: opacity .8s ease;
+}
+
+body.fadeout::after {
+  opacity: 1;
+}
+
+body.fadeout article{
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+}
+
 html{
 scroll-behavior: smooth;
 }
