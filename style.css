@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section, main {
 }
 
 html {
+  image-rendering: pixelated;
   font-size: 62.5%;
 }
 
