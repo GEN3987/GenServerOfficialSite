@@ -1,0 +1,232 @@
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+background-color: #eff0f3;
+    font-family: 'Lato','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+}
+
+#grid {
+  width: 75%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.padding1 {
+    padding: 2% 5% 2% 5%;
+}
+
+.item {
+    border: 1px solid #ccc;
+    width: 32%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+@media only screen and (max-device-width: 480px) {
+.item {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+ }
+}
+
+.item-small {
+    border: 1px solid #ccc;
+    width: 15%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+@media only screen and (max-device-width: 480px) {
+.item-small {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 3px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
+ }
+}
+
+.content {
+    padding: 7%;
+}
+
+.post_date {
+    font-size: 1.0em;
+    font-family: 'Lato', sans-serif;
+    padding: 13px 0% 7px 0%;
+    font-weight: normal;
+}
+
+.post_title {
+    text-align: left;
+    padding: 0px 0% 5px 0%;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.post_text {
+    font-size: 0.9em;
+    padding-top: 0.9em;
+}
+
+/*PC*/
+#header {
+  background: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px 30px;
+}
+#header h1 {
+  margin-right: auto;
+}
+#header #navi {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  list-style: none;
+}
+#header #navi li {
+  margin: 0 15px;
+  line-height: 100%;
+}
+#header #navi li a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/*SP*/
+@media screen and (max-width: 768px) {
+  /* bager menu */
+  #header #navi {
+    transition: all 0.6s;
+    overflow-y: auto;
+    padding-top: 40px;
+    width: 300px;
+    height: 100vh;
+    z-index: 200;
+    top: 0;
+    right: -320px;
+    background-color: #fff;
+    position: fixed;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  #header #navi li {
+    padding: 10px;
+  }
+  #header .nav_btn {
+    width: 44px;
+    height: 44px;
+    z-index: 300;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+    position: absolute;
+  }
+  .hamburger_line {
+    transition: all 0.6s;
+    width: 34px;
+    height: 2px;
+    left: 5px;
+    background-color: #000;
+    position: absolute;
+  }
+  .hamburger_line1 {
+    top: 10px;
+  }
+  .hamburger_line2 {
+    top: 21px;
+  }
+  .hamburger_line3 {
+    top: 32px;
+  }
+  .nav_bg {
+    opacity: 0;
+    transition: all 0.6s;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: #000;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  .nav_open #header #navi {
+    right: 0;
+  }
+  .nav_open .nav_bg {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  .nav_open .hamburger_line1 {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav_open .hamburger_line2 {
+    width: 0;
+    left: 50%;
+  }
+  .nav_open .hamburger_line3 {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+}
+
+.sen {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.sen::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.sen:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+::selection {
+    background: #333;
+    color: #ffffff;
+}
+
